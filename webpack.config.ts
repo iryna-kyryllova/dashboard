@@ -5,7 +5,7 @@ import { Env, Paths } from "./config/webpack/types";
 
 export default (env: Env) => {
   const paths: Paths = {
-    entry: path.resolve(__dirname, 'src', 'index.ts'),
+    entry: path.resolve(__dirname, 'src', 'index.tsx'),
     build: path.resolve(__dirname, 'build'),
     html: path.resolve(__dirname, 'public', 'index.html'),
   };
