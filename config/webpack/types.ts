@@ -10,4 +10,5 @@ export interface BuildOptions {
   mode: Mode;
   paths: Paths;
   isDevelopment: boolean;
+  port: number;
 }

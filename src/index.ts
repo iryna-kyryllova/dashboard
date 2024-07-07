@@ -3,3 +3,5 @@ function test(str: string): string {
 }
 
 console.log(test('Hello, Super World!'));
+
+document.body.innerHTML = "<h1>Hello, Super World!</h1>";
