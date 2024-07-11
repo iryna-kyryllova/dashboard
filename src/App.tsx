@@ -1,31 +1,35 @@
 import { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider, Link, Routes, Route } from 'react-router-dom';
+import { useTheme } from './theme/useTheme';
 import { HomePageAsync } from './pages/HomePage/HomePageAsync';
 import { AboutPageAsync } from './pages/AboutPage/AboutPageAsync';
 import { NotFoundPageAsync } from './pages/NotFoundPage/NotFoundPageAsync';
 import './index.scss';
 
 const Root = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
-    </nav>
-    <Suspense fallback={'Loading...'}>
-      <Routes>
-        <Route path="/" element={<HomePageAsync />} />
-        <Route path="/about" element={<AboutPageAsync />} />
-        <Route path="*" element={<NotFoundPageAsync />} />
-      </Routes>
-    </Suspense>
-    </>
+    <div className={`app ${theme}`}>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </nav>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+      <Suspense fallback={'Loading...'}>
+        <Routes>
+          <Route path="/" element={<HomePageAsync />} />
+          <Route path="/about" element={<AboutPageAsync />} />
+          <Route path="*" element={<NotFoundPageAsync />} />
+        </Routes>
+      </Suspense>
+    </div>
   );
 }
 
