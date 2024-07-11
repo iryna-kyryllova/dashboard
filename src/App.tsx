@@ -4,13 +4,14 @@ import { useTheme } from './theme/useTheme';
 import { HomePageAsync } from './pages/HomePage/HomePageAsync';
 import { AboutPageAsync } from './pages/AboutPage/AboutPageAsync';
 import { NotFoundPageAsync } from './pages/NotFoundPage/NotFoundPageAsync';
+import { classNames } from './helpers/classNames';
 import './styles/index.scss';
 
 const Root = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', [theme], {})}>
       <nav>
         <ul>
           <li>
