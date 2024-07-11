@@ -4,7 +4,7 @@ import { useTheme } from './theme/useTheme';
 import { HomePageAsync } from './pages/HomePage/HomePageAsync';
 import { AboutPageAsync } from './pages/AboutPage/AboutPageAsync';
 import { NotFoundPageAsync } from './pages/NotFoundPage/NotFoundPageAsync';
-import './index.scss';
+import './styles/index.scss';
 
 const Root = () => {
   const { theme, toggleTheme } = useTheme();

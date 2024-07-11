@@ -1,0 +1,15 @@
+@import 'reset';
+@import 'variables';
+@import 'theme/light';
+@import 'theme/dark';
+
+.app {
+  padding: 30px;
+  background-color: var(--bg-color);
+  font: var(--font-main);
+  color: var(--text-color);
+}
+
+h1 {
+  color: var(--primary-color);
+}

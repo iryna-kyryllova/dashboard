@@ -1,0 +1,10 @@
+:root {
+  --font-family-main: 'Roboto', sans-serif;
+  --font-family-secondary: 'Open Sans', sans-serif;
+
+  --font-size: 16px;
+  --line-heigth: 1.5;
+
+  --font-main: var(--font-size) / var(--line-heigth) var(--font-family-main);
+  --font-secondary: var(--font-size) / var(--line-heigth) var(--font-family-secondary);
+}
