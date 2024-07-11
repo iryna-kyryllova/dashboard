@@ -1,7 +1,7 @@
 import { TestComponent } from "../../components/TestComponent"
 
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <>
       <h1>HomePage!</h1>
@@ -9,3 +9,5 @@ export const HomePage = () => {
     </>
   )
 }
+
+export default HomePage;

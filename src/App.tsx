@@ -1,7 +1,8 @@
-import { createBrowserRouter, RouterProvider, RouteObject, Link, Routes, Route } from 'react-router-dom';
-import { HomePage } from './pages/HomePage/HomePage';
-import { AboutPage } from './pages/AboutPage/AboutPage';
-import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
+import { Suspense } from 'react';
+import { createBrowserRouter, RouterProvider, Link, Routes, Route } from 'react-router-dom';
+import { HomePageAsync } from './pages/HomePage/HomePageAsync';
+import { AboutPageAsync } from './pages/AboutPage/AboutPageAsync';
+import { NotFoundPageAsync } from './pages/NotFoundPage/NotFoundPageAsync';
 import './index.scss';
 
 const Root = () => {
@@ -17,11 +18,13 @@ const Root = () => {
         </li>
       </ul>
     </nav>
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+    <Suspense fallback={'Loading...'}>
+      <Routes>
+        <Route path="/" element={<HomePageAsync />} />
+        <Route path="/about" element={<AboutPageAsync />} />
+        <Route path="*" element={<NotFoundPageAsync />} />
+      </Routes>
+    </Suspense>
     </>
   );
 }
