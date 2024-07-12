@@ -20,7 +20,7 @@ const { paths, mode, isDevelopment } = options;
     module: {
       rules: buildLoaders(options),
     },
-    resolve: buildResolvers(),
+    resolve: buildResolvers(options),
     devtool: isDevelopment ? 'inline-source-map' : undefined,
     devServer: isDevelopment ? buildDevServer(options): undefined,
   }

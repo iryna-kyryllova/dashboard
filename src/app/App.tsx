@@ -1,11 +1,11 @@
 import { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider, Link, Routes, Route } from 'react-router-dom';
-import { useTheme } from './theme/useTheme';
-import { HomePageAsync } from './pages/HomePage/HomePageAsync';
-import { AboutPageAsync } from './pages/AboutPage/AboutPageAsync';
-import { NotFoundPageAsync } from './pages/NotFoundPage/NotFoundPageAsync';
-import { classNames } from './helpers/classNames';
-import './styles/index.scss';
+import { useTheme } from 'app/context/theme';
+import { classNames } from 'shared/lib/helpers/classNames';
+import { AboutPage } from 'pages/AboutPage';
+import { HomePage } from 'pages/HomePage';
+import { NotFoundPage } from 'pages/NotFoundPage';
+import 'app/styles/index.scss';
 
 const Root = () => {
   const { theme, toggleTheme } = useTheme();
@@ -25,9 +25,9 @@ const Root = () => {
       <button onClick={toggleTheme}>Toggle Theme</button>
       <Suspense fallback={'Loading...'}>
         <Routes>
-          <Route path="/" element={<HomePageAsync />} />
-          <Route path="/about" element={<AboutPageAsync />} />
-          <Route path="*" element={<NotFoundPageAsync />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
     </div>
