@@ -1,10 +1,7 @@
-import { Suspense } from 'react';
-import { createBrowserRouter, RouterProvider, Link, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
 import { useTheme } from 'app/context/theme';
+import { AppRouter } from 'app/router';
 import { classNames } from 'shared/lib/helpers/classNames';
-import { AboutPage } from 'pages/AboutPage';
-import { HomePage } from 'pages/HomePage';
-import { NotFoundPage } from 'pages/NotFoundPage';
 import 'app/styles/index.scss';
 
 const Root = () => {
@@ -22,14 +19,8 @@ const Root = () => {
           </li>
         </ul>
       </nav>
+      <AppRouter />
       <button onClick={toggleTheme}>Toggle Theme</button>
-      <Suspense fallback={'Loading...'}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
     </div>
   );
 }
