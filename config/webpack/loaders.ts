@@ -3,6 +3,11 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types';
 
 export function buildLoaders({ isDevelopment }: BuildOptions): RuleSetRule[] {
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|eot|ttf|woff|woff2)$/i,
+    type: "asset/resource",
+  }
+
   const svgInlineLoader = {
     test: /\.svg$/i,
     type: 'asset',
@@ -40,6 +45,7 @@ export function buildLoaders({ isDevelopment }: BuildOptions): RuleSetRule[] {
   }
 
   return [
+    fileLoader,
     svgInlineLoader,
     svgComponentLoader,
     cssLoader,
