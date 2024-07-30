@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
 import { useTheme } from 'app/context/theme';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { Navbar } from 'widgets/Navbar';
+import { Header } from 'widgets/Header';
+import { Sidebar } from 'widgets/Sidebar';
 import { AppRouter } from 'app/router';
 import { classNames } from 'shared/lib/helpers/classNames';
 import 'app/styles/index.scss';
@@ -11,9 +11,13 @@ const Root = () => {
 
   return (
     <div className={classNames('app', [theme])}>
-      <ThemeSwitcher />
-      <Navbar />
-      <AppRouter />
+      <Header />
+      <div className='page'>
+        <Sidebar />
+        <main>
+          <AppRouter />
+        </main>
+      </div>
     </div>
   );
 }

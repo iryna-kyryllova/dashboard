@@ -1,13 +1,9 @@
 import { Link } from 'react-router-dom';
-import * as classes from './Navbar.module.scss';
+import * as classes from './Header.module.scss';
 
-interface NavbarProps {
-
-}
-
-export const Navbar = () => {
+export const Header = () => {
   return (
-    <div className={classes.navbar}>
+    <div className={classes.header}>
       <nav>
         <ul>
           <li>
