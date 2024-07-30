@@ -1,3 +1,5 @@
+declare const __IS_DEVELOPMENT__: boolean;
+
 declare module '*.scss' {
   const classes: Record<string, string>;
   export = classes;
