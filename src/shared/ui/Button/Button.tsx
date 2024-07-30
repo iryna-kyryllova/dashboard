@@ -7,7 +7,7 @@ export enum ButtonStyle {
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  buttonStyle?: ButtonStyle;
+  buttonStyle: ButtonStyle;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
