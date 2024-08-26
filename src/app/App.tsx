@@ -1,14 +1,14 @@
-import { Suspense } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { useTheme } from 'app/context/theme';
-import { Header } from 'widgets/Header';
-import { Sidebar } from 'widgets/Sidebar';
-import { AppRouter } from 'app/router';
-import { classNames } from 'shared/lib/helpers/classNames';
-import 'app/styles/index.scss';
+import { Suspense } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { useTheme } from 'app/context/theme'
+import { Header } from 'widgets/Header'
+import { Sidebar } from 'widgets/Sidebar'
+import { AppRouter } from 'app/router'
+import { classNames } from 'shared/lib/helpers/classNames'
+import 'app/styles/index.scss'
 
 const Root = () => {
-  const { theme } = useTheme();
+  const { theme } = useTheme()
 
   return (
     <div className={classNames('app', [theme])}>
@@ -22,15 +22,13 @@ const Root = () => {
         </div>
       </Suspense>
     </div>
-  );
+  )
 }
 
-const router = createBrowserRouter([
-  { path: "*", element: <Root /> },
-]);
+const router = createBrowserRouter([{ path: '*', element: <Root /> }])
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />
 }
 
-export default App;
+export default App
