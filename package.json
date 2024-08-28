@@ -6,7 +6,11 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "dev": "webpack --env mode=development",
-    "build": "webpack --env mode=production"
+    "build": "webpack --env mode=production",
+    "lint:ts": "npx eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "npx eslint --fix \"**/*.{ts,tsx}\"",
+    "lint:scss": "npx stylelint \"**/*.scss\"",
+    "lint:scss:fix": "npx stylelint --fix \"**/*.scss\""
   },
   "author": "Iryna Kyryllova",
   "license": "ISC",
@@ -28,6 +32,8 @@
     "sass": "^1.77.6",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
