@@ -1,4 +1,3 @@
-import { Suspense } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { useTheme } from 'app/context/theme'
 import { Header } from 'widgets/Header'
@@ -12,15 +11,13 @@ const Root = () => {
 
   return (
     <div className={classNames('app', [theme])}>
-      <Suspense fallback={'Loading...'}>
-        <Header />
-        <div className='page'>
-          <Sidebar />
-          <main>
-            <AppRouter />
-          </main>
-        </div>
-      </Suspense>
+      <Header />
+      <div className='page'>
+        <Sidebar />
+        <main>
+          <AppRouter />
+        </main>
+      </div>
     </div>
   )
 }
