@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { useTheme } from 'app/context/theme'
+import { useTheme } from 'app/providers/Theme'
+import { RouterErrorBoundary } from 'app/providers/ErrorBoundary'
 import { Header } from 'widgets/Header'
 import { Sidebar } from 'widgets/Sidebar'
 import { AppRouter } from 'app/router'
@@ -22,7 +23,9 @@ const Root = () => {
   )
 }
 
-const router = createBrowserRouter([{ path: '*', element: <Root /> }])
+const router = createBrowserRouter([
+  { path: '*', element: <Root />, ErrorBoundary: RouterErrorBoundary }
+])
 
 const App = () => {
   return <RouterProvider router={router} />
