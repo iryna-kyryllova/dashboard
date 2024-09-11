@@ -1,12 +1,8 @@
 import { useRouteError } from 'react-router-dom'
+import { ErrorPage } from 'widgets/ErrorPage'
 
 export const RouterErrorBoundary = () => {
-  const error = useRouteError()
+  const error = useRouteError() as Error
 
-  return (
-    <div>
-      <h1>Ошибка из RouterErrorBoundary!</h1>
-      <p>Что-то пошло не так: {(error as Error).message}</p>
-    </div>
-  )
+  return <ErrorPage errorMessage={error.message} />
 }
