@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FC } from 'react'
 import { classNames } from 'shared/lib/helpers/classNames'
-import * as classes from './Button.module.scss'
+import classes from './Button.module.scss'
 
 export enum ButtonStyle {
   TEXT = 'text',

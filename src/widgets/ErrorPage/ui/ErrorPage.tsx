@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonStyle } from 'shared/ui/Button/Button'
-import * as classes from './ErrorPage.module.scss'
+import classes from './ErrorPage.module.scss'
 
 interface ErrorPageProps {
   errorMessage: string

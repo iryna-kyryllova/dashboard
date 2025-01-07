@@ -28,6 +28,7 @@ export function buildLoaders({ isDevelopment }: BuildOptions): RuleSetRule[] {
       {
         loader: 'css-loader',
         options: {
+          esModule: false,
           modules: {
             auto: true,
             localIdentName: isDevelopment ? '[name]__[local]' : '[hash:base64:8]'

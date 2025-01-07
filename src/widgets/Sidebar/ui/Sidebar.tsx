@@ -4,7 +4,7 @@ import { Button, ButtonStyle } from 'shared/ui/Button/Button'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { LangSwitcher } from 'widgets/LangSwitcher'
 import { classNames } from 'shared/lib/helpers/classNames'
-import * as classes from './Sidebar.module.scss'
+import classes from './Sidebar.module.scss'
 import { use } from 'i18next'
 
 export const Sidebar = () => {
