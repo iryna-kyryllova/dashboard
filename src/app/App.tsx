@@ -4,7 +4,7 @@ import { RouterErrorBoundary } from 'app/providers/ErrorBoundary'
 import { Header } from 'widgets/Header'
 import { Sidebar } from 'widgets/Sidebar'
 import { AppRouter } from 'app/router'
-import { classNames } from 'shared/lib/helpers/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import 'app/styles/index.scss'
 
 const Root = () => {

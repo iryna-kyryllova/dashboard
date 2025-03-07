@@ -5,7 +5,7 @@ import classes from './LangSwitcher.module.scss'
 export const LangSwitcher = () => {
   const { t, i18n } = useTranslation()
 
-  const toggleLanguage = () => {
+  const toggleLanguage = async () => {
     i18n.changeLanguage(i18n.language.trim() === 'en' ? 'no' : 'en')
   }
 
