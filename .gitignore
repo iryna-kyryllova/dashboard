@@ -47,3 +47,5 @@ yarn-error.log*
 # Storybook generated directories and files
 .out/
 .storybook/out/
+
+*storybook.log
