@@ -1,14 +1,22 @@
 .btn {
   padding: 0;
-  background-color: red;
+  background-color: transparent;
 }
 
 .text {
   border: none;
-  background-color: transparent;
+  color: var(--text-color);
 }
 
 .primary {
   padding: 15px;
-  border: 2px solid violet;
+  border: 2px solid coral;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.outline {
+  padding: 15px;
+  border: 2px solid var(--secondary-color);
+  color: var(--text-color);
 }

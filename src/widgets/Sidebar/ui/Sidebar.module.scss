@@ -1,7 +1,7 @@
 .sidebar {
   width: 300px;
-  background-color: #d3d3d3;
-  transition: width .3s ease;
+  background-color: var(--bg-color);
+  transition: width 0.3s ease;
 }
 
 .collapsed {

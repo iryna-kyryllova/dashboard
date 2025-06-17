@@ -3,19 +3,14 @@
 @use 'theme/light';
 @use 'theme/dark';
 
-h1 {
-  color: var(--primary-color);
-}
-
-button {
-  cursor: pointer;
+.body {
+  min-height: 100vh;
+  font: var(--font-main);
 }
 
 .app {
-  min-height: 100vh;
   padding: 30px;
   background-color: var(--bg-color);
-  font: var(--font-main);
   color: var(--text-color);
 }
 
@@ -26,4 +21,12 @@ button {
 main {
   flex: 1;
   background-color: #ebd5d5;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+button {
+  cursor: pointer;
 }

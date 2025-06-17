@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonStyle } from 'shared/ui/Button/Button'
-import classes from './LangSwitcher.module.scss'
+import classes from './Langswitcher.module.scss'
 
 export const LangSwitcher = () => {
   const { t, i18n } = useTranslation()

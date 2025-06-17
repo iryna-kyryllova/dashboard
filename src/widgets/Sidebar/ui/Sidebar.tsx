@@ -19,7 +19,7 @@ export const Sidebar = () => {
       data-testid='sidebar'
       className={classNames(classes.sidebar, [], { [classes.collapsed]: collapsed })}>
       <Button data-testid='sidebar-toggle' buttonStyle={ButtonStyle.TEXT} onClick={toggleCollapsed}>
-        {t('Close')}
+        {collapsed ? t('Open') : t('Close')}
       </Button>
       <ThemeSwitcher />
       <LangSwitcher />
