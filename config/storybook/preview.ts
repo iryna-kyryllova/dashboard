@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/react'
+import type { Preview } from '@storybook/react-webpack5'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { RouterDecorator } from 'shared/config/storybook/RouterDecorator'
 import { Theme } from 'app/providers/Theme'
