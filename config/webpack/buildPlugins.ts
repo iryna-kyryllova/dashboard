@@ -8,7 +8,7 @@ export function buildPlugins({
   paths,
   isDevelopment
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
+  const plugins = [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({ template: paths.html }),
     new MiniCssExtractPlugin({
@@ -17,9 +17,16 @@ export function buildPlugins({
     }),
     new webpack.DefinePlugin({
       __IS_DEVELOPMENT__: JSON.stringify(isDevelopment)
-    }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false
     })
   ]
+
+  if (isDevelopment) {
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false
+      })
+    )
+  }
+
+  return plugins
 }
