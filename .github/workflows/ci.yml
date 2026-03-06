@@ -22,13 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Debug LangSwitcher
-        run: |
-          echo "=== LangSwitcher tree ==="
-          ls -R src/widgets/LangSwitcher
-          echo "=== index.ts ==="
-          cat src/widgets/LangSwitcher/index.ts
-
       - name: Build
         run: npm run build
 
