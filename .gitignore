@@ -49,3 +49,4 @@ yarn-error.log*
 .storybook/out/
 
 *storybook.log
+storybook-static

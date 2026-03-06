@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
-
       - name: Lint typescript
         run: npm run lint:ts
 
@@ -33,3 +30,9 @@ jobs:
 
       - name: Run unit tests
         run: npm run unit
+
+      - name: Build
+        run: npm run build
+
+      - name: Build Storybook
+        run: npm run build-storybook
